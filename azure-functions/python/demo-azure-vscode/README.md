@@ -95,3 +95,7 @@ When the function executes locally and returns a response, a notification is rai
 With the Terminal panel focused, press Ctrl + C to stop Core Tools and disconnect the debugger.
 
 After you verify that the function runs correctly on your local computer, it's time to use Visual Studio Code to publish the project directly to Azure.
+
+## Sign in to Azure
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png)
