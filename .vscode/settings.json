@@ -1,6 +1,8 @@
 {
   "cSpell.words": [
     "Quickstart",
+    "rbfndemo",
+    "rbfndemojavascriptportal",
     "sademoaz"
   ],
   "azureFunctions.deploySubpath": "azure-functions/javascript/demo-azure-portal",
