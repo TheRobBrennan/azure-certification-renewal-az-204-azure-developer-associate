@@ -107,3 +107,24 @@ Before you can deploy your function code to Azure, you need to create three reso
 % az functionapp create --resource-group AzureFunctionsQuickstart-rg --consumption-plan-location westus --runtime node --runtime-version 20 --functions-version 4 --name sademorb --storage-account sademorb
 
 ```
+
+## Deploy the function project to Azure
+
+```sh
+# Publish to Azure
+% func azure functionapp publish sademorb
+Setting Functions site property 'netFrameworkVersion' to 'v8.0'
+Getting site publishing info...
+[2024-08-24T03:54:27.332Z] Starting the function app deployment...
+Creating archive for current directory...
+Uploading 651.33 KB [#############################################################################]
+Upload completed successfully.
+Deployment completed successfully.
+[2024-08-24T03:54:47.787Z] Syncing triggers...
+Functions in sademorb:
+    HttpExample - [httpTrigger]
+        Invoke url: https://sademorb.azurewebsites.net/api/httpexample
+
+```
+
+In the above example, we can see that our httpexample function has been deployed to [https://sademorb.azurewebsites.net/api/httpexample](https://sademorb.azurewebsites.net/api/httpexample) 🤓

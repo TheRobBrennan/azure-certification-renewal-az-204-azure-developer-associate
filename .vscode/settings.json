@@ -2,11 +2,15 @@
   "cSpell.words": [
     "authlevel",
     "funcignore",
+    "functionapp",
+    "httpexample",
     "httptrigger",
     "Quickstart",
     "rbfndemo",
     "rbfndemojavascriptportal",
-    "sademoaz"
+    "sademoaz",
+    "sademorb",
+    "westus"
   ],
   "azureFunctions.deploySubpath": "azure-functions/javascript/demo-azure-portal",
   "azureFunctions.postDeployTask": "npm install (functions)",
