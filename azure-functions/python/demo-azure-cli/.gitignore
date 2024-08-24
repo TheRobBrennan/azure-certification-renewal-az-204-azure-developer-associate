@@ -1,1 +1,4 @@
 .venv
+
+# Because local.settings.json can contain secrets downloaded from Azure, the file is excluded from source contro
+local.settings.json
