@@ -143,3 +143,9 @@ Once you have successfully deployed to Azure, you should see `Output` similar to
 12:30:46 AM rbfndemo-python-portal: HTTP Trigger Urls:
   HttpTrigger: https://rbfndemo-python-portal.azurewebsites.net/api/httptrigger
 ```
+
+## Run the function in Azure
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png)
+
+Example URL for the HttpExample function - [https://rbfndemo-python-portal.azurewebsites.net/api/httptrigger?name=Rob](https://rbfndemo-python-portal.azurewebsites.net/api/httptrigger?name=Rob)
