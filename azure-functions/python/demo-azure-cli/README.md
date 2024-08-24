@@ -1,0 +1,55 @@
+# EXAMPLE: Using VS Code
+
+Please see [Quickstart: Create a Python function in Azure from the command line](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-python?tabs=macos%2Cbash%2Cazure-cli%2Cbrowser) for detailed instructions.
+
+In this article, you use command-line tools to create a Python function that responds to HTTP requests. After testing the code locally, you deploy it to the serverless environment of Azure Functions.
+
+This article uses the Python v2 programming model for Azure Functions, which provides a decorator-based approach for creating functions. To learn more about the Python v2 programming model, see the Developer Reference Guide
+
+## Configure your local environment
+
+Before you begin, you must have the following requirements in place:
+
+- An Azure account with an active subscription. Create an account for free.
+
+- [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli) version 2.4 or later.
+
+- A Python version [supported by Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/supported-languages#languages-by-runtime-version).
+
+- The Azurite storage emulator. While you can also use an actual Azure Storage account, the article assumes you're using this emulator.
+  - See [Use the Azurite emulator for local Azure Storage development](https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azurite?tabs=visual-studio-code%2Cblob-storage#install-azurite)
+
+### Install the Azure Functions Core Tools
+
+```sh
+# PREREQUISITE: Install the Azure CLI tool on macOS
+% brew update && brew install azure-cli
+rob@prism javascript % brew update && brew install azure-cli
+==> Updating Homebrew...
+Already up-to-date.
+Warning: azure-cli 2.63.0 is already installed and up-to-date.
+To reinstall 2.63.0, run:
+  brew reinstall azure-cli
+
+# PREREQUISITE: Install the Azure Functions Core Tools on macOS
+#   => Install homebrew if it's not already installed - https://brew.sh/
+% brew tap azure/functions
+% brew install azure-functions-core-tools@4
+
+# VERIFY: Make sure your version of Core Tools is at least 4.0.5530
+% func --version
+
+```
+
+### Create and activate a virtual environment
+
+```sh
+# Create a folder that will contain your Azure Functions project
+% mkdir demo-azure-cli
+
+# Create and activate a virtual environment on macOS
+% python3 -m venv .venv
+% source .venv/bin/activate
+(.venv) % 
+
+```

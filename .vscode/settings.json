@@ -11,6 +11,7 @@
     "rbfndemojavascriptportal",
     "sademoaz",
     "sademorb",
+    "venv",
     "westus"
   ],
   "azureFunctions.deploySubpath": "azure-functions/javascript/demo-azure-portal",
