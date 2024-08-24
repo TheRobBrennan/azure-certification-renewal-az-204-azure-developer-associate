@@ -117,3 +117,27 @@ Copy the URL of your HTTP function from this output to a browser and append the 
 [2024-08-24T05:16:22.712Z] Executed 'Functions.HttpExample' (Succeeded, Id=d70df015-5013-4a0e-ac57-0aa14f910f9f, Duration=118ms)
 ^C
 ```
+
+## Create supporting Azure resources for your function
+
+Before you can deploy your function code to Azure, you need to create three resources:
+
+- A resource group, which is a logical container for related resources.
+- A Storage account, which is used to maintain state and other information about your functions.
+- A function app, which provides the environment for executing your function code. A function app maps to your local function project and lets you group functions as a logical unit for easier management, deployment, and sharing of resources.
+
+```sh
+# Make sure you have logged in to Azure
+% az login
+
+# Create a resource group
+% az group create --name AzureFunctionsQuickstart-rg --location westus
+
+# Create a general-purpose storage account named sademorb in your resource group and region
+% az storage account create --name sademorb --location westus --resource-group AzureFunctionsQuickstart-rg --sku Standard_LRS --allow-blob-public-access false
+
+# Create the function app in Azure
+# NOTE: Python functions only run on Linux, so we need to specify the --os-type flag
+% az functionapp create --resource-group AzureFunctionsQuickstart-rg --consumption-plan-location westus --runtime python --runtime-version 3.11 --functions-version 4 --name sademorb --os-type linux --storage-account sademorb
+
+```
