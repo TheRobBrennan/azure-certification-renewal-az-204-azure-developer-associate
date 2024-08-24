@@ -59,14 +59,11 @@ To reinstall 2.63.0, run:
 In Azure Functions, a function project is a container for one or more individual functions that each responds to a specific trigger. All functions in a project share the same local and hosting configurations.
 
 ```sh
-# Navigate to the appropriate directory
-% cd azure-functions/python/demo-azure-cli
-
 # Make sure you have activated your virtual environment
 % source .venv/bin/activate
 
 # Initialize a Python Azure Functions Project
-% func init --python
+(.venv) % func init --python
 Found Python version 3.11.1 (python3).
 The new Python programming model is generally available. Learn more at https://aka.ms/pythonprogrammingmodel
 Writing requirements.txt
@@ -78,8 +75,45 @@ Writing local.settings.json
 Writing /Users/rob/repos/azure-certification-renewal-az-204-azure-developer-associate/azure-functions/python/demo-azure-cli/.vscode/extensions.json
 
 # Add a function named HttpExample as a public function using an HTTP Trigger
-% func new --name HttpExample --template "HTTP trigger" --authlevel "anonymous"
+(.venv) % func new --name HttpExample --template "HTTP trigger" --authlevel "anonymous"
 Appending to /Users/rob/repos/azure-certification-renewal-az-204-azure-developer-associate/azure-functions/python/demo-azure-cli/function_app.py
 The function "HttpExample" was created successfully from the "HTTP trigger" template.
 
+```
+
+## Run the function locally
+
+```sh
+# Make sure you have activated your virtual environment
+% source .venv/bin/activate
+
+# TROUBLESHOOTING: Did you install the Azurite extension for VS Code at https://marketplace.visualstudio.com/items?itemName=Azurite.azurite
+# Open the VS Code command palette and run `Azurite: Start`
+
+# Run the function locally
+(.venv) % func start
+Found Python version 3.11.1 (python3).
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.5907 Commit hash: N/A +807e89766a92b14fd07b9f0bc2bea1d8777ab209 (64-bit)
+Function Runtime Version: 4.834.3.22875
+
+[2024-08-24T05:11:30.392Z] Worker process started and initialized.
+
+Functions:
+
+        HttpExample:  http://localhost:7071/api/HttpExample
+
+For detailed output, run func with --verbose flag.
+[2024-08-24T05:11:35.342Z] Host lock lease acquired by instance ID '0000000000000000000000002D9F298A'.
+
+```
+
+Copy the URL of your HTTP function from this output to a browser and append the query string ?name=<YOUR_NAME>, making the full URL like [http://localhost:7071/api/HttpExample?name=Rob](http://localhost:7071/api/HttpExample?name=Rob)
+
+```sh
+[2024-08-24T05:16:22.624Z] Executing 'Functions.HttpExample' (Reason='This function was programmatically called via the host APIs.', Id=d70df015-5013-4a0e-ac57-0aa14f910f9f)
+[2024-08-24T05:16:22.664Z] Python HTTP trigger function processed a request.
+[2024-08-24T05:16:22.712Z] Executed 'Functions.HttpExample' (Succeeded, Id=d70df015-5013-4a0e-ac57-0aa14f910f9f, Duration=118ms)
+^C
 ```
