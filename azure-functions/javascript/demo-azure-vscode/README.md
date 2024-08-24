@@ -1,4 +1,4 @@
-# EXAMPLE: Using the Azure Portal
+# EXAMPLE: Using VS Code
 
 Please see [Quickstart: Create a JavaScript function in Azure using Visual Studio Code](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node?pivots=nodejs-model-v4) for more information.
 
