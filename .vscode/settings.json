@@ -1,5 +1,13 @@
 {
   "cSpell.words": [
     "Quickstart"
-  ]
+  ],
+  "azureFunctions.deploySubpath": "azure-functions/javascript/demo-azure-portal",
+  "azureFunctions.postDeployTask": "npm install (functions)",
+  "azureFunctions.projectLanguage": "JavaScript",
+  "azureFunctions.projectRuntime": "~4",
+  "debug.internalConsoleOptions": "neverOpen",
+  "azureFunctions.projectLanguageModel": 4,
+  "azureFunctions.projectSubpath": "azure-functions/javascript/demo-azure-portal",
+  "azureFunctions.preDeployTask": "npm prune (functions)"
 }
