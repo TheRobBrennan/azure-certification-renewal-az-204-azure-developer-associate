@@ -125,3 +125,21 @@ When the function app is created, the following related resources are created in
 - A notification is displayed after your function app is created and the deployment package is applied.
 
 Tip: By default, the Azure resources required by your function app are created based on the name you enter for your function app. By default, the resources are created with the function app in the same, new resource group. If you want to customize the names of the associated resources or reuse existing resources, publish the project with advanced create options.
+
+## Deploy the project to Azure
+
+IMPORTANT: Deploying to an existing function app always overwrites the contents of that app in Azure.
+
+In the command palette, enter and then select `Azure Functions: Deploy to Function App`.
+
+Select the function app you just created. When prompted about overwriting previous deployments, select `Deploy` to deploy your function code to the new function app resource.
+
+Once you have successfully deployed to Azure, you should see `Output` similar to the following:
+
+```sh
+12:30:30 AM rbfndemo-python-portal: Deployment successful. deployer = ms-azuretools-vscode deploymentPath = Functions App ZipDeploy. Extract zip. Remote build.
+12:30:42 AM rbfndemo-python-portal: Syncing triggers...
+12:30:43 AM rbfndemo-python-portal: Querying triggers...
+12:30:46 AM rbfndemo-python-portal: HTTP Trigger Urls:
+  HttpTrigger: https://rbfndemo-python-portal.azurewebsites.net/api/httptrigger
+```
