@@ -40,3 +40,43 @@ Provide the following information at the prompts:
 - Provide a function name: `HttpExample`
 
 Using this information, Visual Studio Code generates an Azure Functions project with an HTTP trigger. You can view the local project files in the Explorer. To learn more about files that are created, see Azure Functions JavaScript developer guide.
+
+### Run the function locally
+
+Before running the function, you will need to either use or create an Azure Storage Account - or install a local Azure storage emulator.
+
+Since I'm going to be exploring several possibilities of creating and running Azure Functions using VS Code, I opted to create a new Resource Group in the Azure Portal that I could reuse across projects.
+
+```sh
+# Log in to the Azure Portal
+
+# Create a new Resource Group - rg-demo-az204-renewal
+# Create a new Storage Account - sademoaz204renewal
+```
+
+Please consult the [guide](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-vs-code-node?pivots=nodejs-model-v4#run-the-function-locally) if you are unable to get the functions app to run on your local environment.
+
+Once you have the application running, you should see output similar to:
+
+```sh
+ *  Executing task: func host start 
+
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.5907 Commit hash: N/A +807e89766a92b14fd07b9f0bc2bea1d8777ab209 (64-bit)
+Function Runtime Version: 4.834.3.22875
+
+[2024-08-24T02:32:29.846Z] Debugger listening on ws://127.0.0.1:9229/4b0de711-f800-4530-813f-50327fd55c11
+[2024-08-24T02:32:29.846Z] For help, see: https://nodejs.org/en/docs/inspector
+[2024-08-24T02:32:29.922Z] Worker process started and initialized.
+[2024-08-24T02:32:29.952Z] Debugger attached.
+
+Functions:
+
+        HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
+
+For detailed output, run func with --verbose flag.
+[2024-08-24T02:32:34.865Z] Host lock lease acquired by instance ID '0000000000000000000000002D9F298A'.
+```
+
+![](https://learn.microsoft.com/en-us/azure/includes/media/functions-run-function-test-local-vs-code/execute-function-now.png)

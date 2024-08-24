@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
-    "Quickstart"
+    "Quickstart",
+    "sademoaz"
   ],
   "azureFunctions.deploySubpath": "azure-functions/javascript/demo-azure-portal",
   "azureFunctions.postDeployTask": "npm install (functions)",
