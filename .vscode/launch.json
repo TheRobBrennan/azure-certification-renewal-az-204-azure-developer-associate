@@ -8,6 +8,16 @@
       "restart": true,
       "port": 9229,
       "preLaunchTask": "func: host start"
+    },
+    {
+      "name": "Attach to Python Functions",
+      "type": "debugpy",
+      "request": "attach",
+      "connect": {
+        "host": "localhost",
+        "port": 9091
+      },
+      "preLaunchTask": "func: host start"
     }
   ]
 }
