@@ -37,13 +37,16 @@
     "zipdeploy"
   ],
   "azureFunctions.deploySubpath": "azure-functions/python/demo-azure-vscode",
-  "azureFunctions.postDeployTask": "npm install (functions)",
   "azureFunctions.projectLanguage": "Python",
   "azureFunctions.projectRuntime": "~4",
   "debug.internalConsoleOptions": "neverOpen",
   "azureFunctions.projectLanguageModel": 2,
   "azureFunctions.projectSubpath": "azure-functions/python/demo-azure-vscode",
-  "azureFunctions.preDeployTask": "npm prune (functions)",
+
+  // TODO: Uncomment these NPM tasks if you are deploying JavaScript or TypeScript functions
+  // "azureFunctions.preDeployTask": "npm prune (functions)",
+  // "azureFunctions.postDeployTask": "npm install (functions)",
+
   "azureFunctions.scmDoBuildDuringDeployment": true,
   "azureFunctions.pythonVenv": ".venv"
 }
