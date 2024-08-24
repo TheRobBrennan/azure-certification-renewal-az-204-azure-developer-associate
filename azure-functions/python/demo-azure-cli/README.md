@@ -273,3 +273,17 @@ In the above example, we can see that our httpexample function has been deployed
 ## Invoke the function on Azure
 
 Open a browser and test your function by adding a `name` query parameter to the URL - [https://sademorb.azurewebsites.net/api/httpexample?name=Rob](https://sademorb.azurewebsites.net/api/httpexample?name=Rob)
+
+## Clean up resources
+
+```sh
+# Delete the resource group and all of the resources it contains
+% az group delete --name AzureFunctionsQuickstart-rg
+
+```
+
+This command may take a little bit of time. In this case, it was just over a minute and a half to complete on my machine:
+
+```sh
+0.34s user 0.14s system 0% cpu 1:32.72 total
+```
