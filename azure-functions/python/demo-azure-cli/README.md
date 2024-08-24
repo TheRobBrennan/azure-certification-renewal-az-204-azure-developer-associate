@@ -269,3 +269,7 @@ Functions in sademorb:
 ```
 
 In the above example, we can see that our httpexample function has been deployed to [https://sademorb.azurewebsites.net/api/httpexample](https://sademorb.azurewebsites.net/api/httpexample) 🤓
+
+## Invoke the function on Azure
+
+Open a browser and test your function by adding a `name` query parameter to the URL - [https://sademorb.azurewebsites.net/api/httpexample?name=Rob](https://sademorb.azurewebsites.net/api/httpexample?name=Rob)
