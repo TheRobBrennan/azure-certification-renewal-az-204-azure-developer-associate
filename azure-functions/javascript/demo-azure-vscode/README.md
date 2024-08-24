@@ -132,10 +132,6 @@ Example URL for the HttpExample function - [https://rbfndemo-javascript-portal.a
 
 ## Clean up resources
 
-you can use the following steps to delete the function app and its related resources to avoid incurring any further costs.
-
-- In Visual Studio Code, select the Azure icon to open the Azure explorer.
-- In the Resource Groups section, find your resource group.
-- Right-click the resource group and select Delete.
+In the Azure Portal, navigate to your Resource Group and delete it.
 
 To learn more about Functions costs, see [Estimating Consumption plan costs](https://learn.microsoft.com/en-us/azure/azure-functions/functions-consumption-costs).
