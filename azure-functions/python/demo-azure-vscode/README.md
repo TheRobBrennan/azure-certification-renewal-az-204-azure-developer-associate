@@ -149,3 +149,9 @@ Once you have successfully deployed to Azure, you should see `Output` similar to
 ![https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png)
 
 Example URL for the HttpExample function - [https://rbfndemo-python-portal.azurewebsites.net/api/httptrigger?name=Rob](https://rbfndemo-python-portal.azurewebsites.net/api/httptrigger?name=Rob)
+
+## Clean up resources
+
+In the Azure Portal, navigate to your Resource Group and delete it.
+
+To learn more about Functions costs, see [Estimating Consumption plan costs](https://learn.microsoft.com/en-us/azure/azure-functions/functions-consumption-costs).
