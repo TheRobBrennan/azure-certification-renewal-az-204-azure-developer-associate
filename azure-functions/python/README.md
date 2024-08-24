@@ -52,3 +52,9 @@ In the `local.settings.json` file, update the `AzureWebJobsStorage` setting as i
 ```
 
 This tells the local Functions host to use the storage emulator for the storage connection currently required by the Python v2 model. When you publish your project to Azure, you need to instead use the default storage account. If you're instead using an Azure Storage account, set your storage account connection string here.
+
+## Start the Azure Storage emulator
+
+In Visual Studio Code, open the command palette, search for and select `Azurite: Start` if it isn't already running.
+
+Check the bottom bar and verify that Azurite emulation services are running. If so, you can now run your function locally.
