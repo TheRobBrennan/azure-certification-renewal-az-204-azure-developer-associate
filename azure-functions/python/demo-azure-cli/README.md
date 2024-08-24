@@ -141,3 +141,131 @@ Before you can deploy your function code to Azure, you need to create three reso
 % az functionapp create --resource-group AzureFunctionsQuickstart-rg --consumption-plan-location westus --runtime python --runtime-version 3.11 --functions-version 4 --name sademorb --os-type linux --storage-account sademorb
 
 ```
+
+## Deploy the function project to Azure
+
+```sh
+# Publish to Azure
+% func azure functionapp publish sademorb
+Getting site publishing info...
+[2024-08-24T05:25:48.652Z] Starting the function app deployment...
+Removing WEBSITE_CONTENTAZUREFILECONNECTIONSTRING app setting.
+Removing WEBSITE_CONTENTSHARE app setting.
+Creating archive for current directory...
+Performing remote build for functions project.
+Uploading 7.9 MB [################################################################################]
+Remote build in progress, please wait...
+Updating submodules.
+Preparing deployment for commit id '1e037638-7'.
+PreDeployment: context.CleanOutputPath False
+PreDeployment: context.OutputPath /home/site/wwwroot
+Repository path is /tmp/zipdeploy/extracted
+Running oryx build...
+Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p packagedir=.python_packages/lib/site-packages
+Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+You can report issues at https://github.com/Microsoft/Oryx/issues
+
+Oryx Version: 0.2.20230210.1, Commit: a49c8f6b8abbe95b4356552c4c884dea7fd0d86e, ReleaseTagName: 20230210.1
+
+Build Operation ID: 1768b4254cdff4f9
+Repository Commit : 1e037638-7090-4211-9fb0-b344fe8bc7f3
+OS Type           : bullseye
+Image Type        : githubactions
+
+Detecting platforms...
+Detected following platforms:
+  python: 3.11.8
+Version '3.11.8' of platform 'python' is not installed. Generating script to install it...
+
+
+Source directory     : /tmp/zipdeploy/extracted
+Destination directory: /home/site/wwwroot
+
+
+Downloading and extracting 'python' version '3.11.8' to '/tmp/oryx/platforms/python/3.11.8'...
+Detected image debian flavor: bullseye.
+Downloaded in 2 sec(s).
+Verifying checksum...
+Extracting contents...
+performing sha512 checksum for: python...
+Done in 5 sec(s).
+
+image detector file exists, platform is python..
+OS detector file exists, OS is bullseye..
+Python Version: /tmp/oryx/platforms/python/3.11.8/bin/python3.11
+Creating directory for command manifest file if it does not exist
+Removing existing manifest file
+
+Running pip install...
+Done in 1 sec(s).
+[05:26:11+0000] Collecting azure-functions
+[05:26:11+0000]   Downloading azure_functions-1.20.0-py3-none-any.whl (181 kB)
+[05:26:11+0000] Installing collected packages: azure-functions
+[05:26:11+0000] Successfully installed azure-functions-1.20.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+WARNING: You are using pip version 21.2.4; however, version 24.2 is available.
+You should consider upgrading via the '/tmp/oryx/platforms/python/3.11.8/bin/python3.11 -m pip install --upgrade pip' command.
+Not a vso image, so not writing build commands
+Preparing output...
+
+Copying files to destination directory '/home/site/wwwroot'...
+Done in 0 sec(s).
+
+Removing existing manifest file
+Creating a manifest file...
+Manifest file created.
+Copying .ostype to manifest output directory.
+
+Done in 7 sec(s).
+Running post deployment command(s)...
+
+Generating summary of Oryx build
+Deployment Log file does not exist in /tmp/oryx-build.log
+The logfile at /tmp/oryx-build.log is empty. Unable to fetch the summary of build
+Triggering recycle (preview mode disabled).
+Linux Consumption plan has a 1.5 GB memory limit on a remote build container.
+To check our service limit, please visit https://docs.microsoft.com/en-us/azure/azure-functions/functions-scale#service-limits
+Writing the artifacts to a squashfs file
+Parallel mksquashfs: Using 1 processor
+Creating 4.0 filesystem on /home/site/artifacts/functionappartifact.squashfs, block size 131072.
+
+[=============================================================-] 1633/1633 100%
+
+Exportable Squashfs 4.0 filesystem, gzip compressed, data block size 131072
+        compressed data, compressed metadata, compressed fragments,
+        compressed xattrs, compressed ids
+        duplicates are removed
+Filesystem size 7249.51 Kbytes (7.08 Mbytes)
+        30.43% of uncompressed filesystem size (23823.83 Kbytes)
+Inode table size 17164 bytes (16.76 Kbytes)
+        29.34% of uncompressed inode table size (58500 bytes)
+Directory table size 17501 bytes (17.09 Kbytes)
+        36.76% of uncompressed directory table size (47613 bytes)
+Number of duplicate files found 85
+Number of inodes 1820
+Number of files 1623
+Number of fragments 163
+Number of symbolic links  0
+Number of device nodes 0
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 197
+Number of ids (unique uids + gids) 1
+Number of uids 1
+        root (0)
+Number of gids 1
+        root (0)
+Creating placeholder blob for linux consumption function app...
+SCM_RUN_FROM_PACKAGE placeholder blob scm-latest-sademorb.zip located
+Uploading built content /home/site/artifacts/functionappartifact.squashfs for linux consumption function app...
+Resetting all workers for sademorb.azurewebsites.net
+Deployment successful. deployer = Push-Deployer deploymentPath = Functions App ZipDeploy. Extract zip. Remote build.
+Remote build succeeded!
+[2024-08-24T05:26:29.673Z] Syncing triggers...
+Functions in sademorb:
+    HttpExample - [httpTrigger]
+        Invoke url: https://sademorb.azurewebsites.net/api/httpexample
+
+```
+
+In the above example, we can see that our httpexample function has been deployed to [https://sademorb.azurewebsites.net/api/httpexample](https://sademorb.azurewebsites.net/api/httpexample) 🤓
