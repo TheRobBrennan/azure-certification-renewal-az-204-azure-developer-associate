@@ -128,3 +128,23 @@ Functions in sademorb:
 ```
 
 In the above example, we can see that our httpexample function has been deployed to [https://sademorb.azurewebsites.net/api/httpexample](https://sademorb.azurewebsites.net/api/httpexample) 🤓
+
+## Invoke the function on Azure
+
+Open a browser and test your function by adding a `name` query parameter to the URL - [https://sademorb.azurewebsites.net/api/httpexample?name=Rob](https://sademorb.azurewebsites.net/api/httpexample?name=Rob)
+
+You can run the following command to view near real-time streaming logs:
+
+```sh
+% func azure functionapp logstream sademorb
+Retrieving Function App...
+2024-08-24T04:00:49  Welcome, you are now connected to log-streaming service. The default timeout is 2 hours. Change the timeout with the App Setting SCM_LOGSTREAM_TIMEOUT (in seconds). 
+2024-08-24T04:00:55.341 [Information] Executing 'Functions.HttpExample' (Reason='This function was programmatically called via the host APIs.', Id=346a8d27-3769-402a-bfaf-3b2e3bf65ec5)
+2024-08-24T04:00:55.351 [Information] Http function processed request for url "https://sademorb.azurewebsites.net/api/httpexample?name=Rob"
+2024-08-24T04:00:55.351 [Information] Executed 'Functions.HttpExample' (Succeeded, Id=346a8d27-3769-402a-bfaf-3b2e3bf65ec5, Duration=10ms)
+2024-08-24T04:00:55.341 [Information] Executing 'Functions.HttpExample' (Reason='This function was programmatically called via the host APIs.', Id=346a8d27-3769-402a-bfaf-3b2e3bf65ec5)
+2024-08-24T04:00:55.350 [Information] Http function processed request for url "https://sademorb.azurewebsites.net/api/httpexample?name=Rob"
+2024-08-24T04:00:55.351 [Information] Executed 'Functions.HttpExample' (Succeeded, Id=346a8d27-3769-402a-bfaf-3b2e3bf65ec5, Duration=10ms)
+^C
+
+```
