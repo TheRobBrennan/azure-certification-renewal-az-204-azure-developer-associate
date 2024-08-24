@@ -1,4 +1,4 @@
-# EXAMPLE: Using VS Code
+# EXAMPLE: Using the Azure CLI
 
 Please see [Quickstart: Create a Python function in Azure from the command line](https://learn.microsoft.com/en-us/azure/azure-functions/create-first-function-cli-python?tabs=macos%2Cbash%2Cazure-cli%2Cbrowser) for detailed instructions.
 
