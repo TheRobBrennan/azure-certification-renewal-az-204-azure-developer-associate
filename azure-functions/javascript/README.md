@@ -80,3 +80,7 @@ For detailed output, run func with --verbose flag.
 ```
 
 ![](https://learn.microsoft.com/en-us/azure/includes/media/functions-run-function-test-local-vs-code/execute-function-now.png)
+
+### Sign in to Azure
+
+![](https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png)
