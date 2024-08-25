@@ -9,3 +9,5 @@ Example Azure Function projects are available in this repo for:
 - [JavaScript](./azure-functions/javascript/README.md)
 
 - [Python](./azure-functions/python/README.md)
+
+- [TypeScript](./azure-functions/typescript/README.md)
