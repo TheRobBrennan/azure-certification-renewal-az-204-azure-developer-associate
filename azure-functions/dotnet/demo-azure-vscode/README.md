@@ -146,11 +146,26 @@ In the `Azure: Activity Log` panel, the Azure extension shows the status of indi
 
 When the function app is created, the following related resources are created in your Azure subscription. The resources are named based on the name you entered for your function app.
 
-- A resource group, which is a logical container for related resources. - `rbfndemojavascriptportal`
-- A standard Azure Storage account, which maintains state and other information about your projects. - `rbfndemojavascriptportal`
-- A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan. - `rbfndemo-javascript-portal`
-- An Azure App Service plan, which defines the underlying host for your function app. - `ASP-rbfndemo-javascript-portal-6797`
-- An Application Insights instance that's connected to the function app, and which tracks the use of your functions in the app. - `rbfndemojavascriptportal`
+- A resource group, which is a logical container for related resources. - `rbfndemodotnetportal`
+- A standard Azure Storage account, which maintains state and other information about your projects. - `rbfndemodotnetportal`
+- A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan. - `rbfndemo-dotnet-portal`
+- An Azure App Service plan, which defines the underlying host for your function app. - `ASP-rbfndemo-dotnet-portal-d925`
+- An Application Insights instance that's connected to the function app, and which tracks the use of your functions in the app. - `rbfndemodotnetportal`
 - A notification is displayed after your function app is created and the deployment package is applied.
 
 Tip: By default, the Azure resources required by your function app are created based on the name you enter for your function app. By default, the resources are created with the function app in the same, new resource group. If you want to customize the names of the associated resources or reuse existing resources, publish the project with advanced create options.
+
+## Deploy the project to Azure
+
+IMPORTANT: Deploying to an existing function app always overwrites the contents of that app in Azure.
+
+In the command palette, enter and then select `Azure Functions: Deploy to Function App`.
+
+Select the function app you just created. When prompted about overwriting previous deployments, select `Deploy` to deploy your function code to the new function app resource.
+
+Once you have successfully deployed to Azure, you should see `Output` similar to the following:
+
+```sh
+3:52:33 PM rbfndemo-dotnet-portal: HTTP Trigger Urls:
+  HttpExample: https://rbfndemo-dotnet-portal.azurewebsites.net/api/httpexample
+```
