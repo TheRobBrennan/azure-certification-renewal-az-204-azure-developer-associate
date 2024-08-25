@@ -82,3 +82,43 @@ Provide the following information at the prompts:
 - Authorization level: `Anonymous`
 
 Visual Studio Code uses the provided information and generates an Azure Functions project with an HTTP trigger. You can view the local project files in the Explorer.
+
+## Run the function locally
+
+In the `Run and Debug` extension, select `Attach to .NET Functions` to run your C# Azure Functions project locally.
+
+Please see [Run the function locally](https://learn.microsoft.com/en-us/training/modules/develop-azure-functions/5-create-function-visual-studio-code) if you are encountering issues.
+
+In the `Terminal` output tab in VS Code, you should see something similar to:
+
+```sh
+ *  Executing task: func host start 
+
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.5907 Commit hash: N/A +807e89766a92b14fd07b9f0bc2bea1d8777ab209 (64-bit)
+Function Runtime Version: 4.834.3.22875
+
+[2024-08-25T22:36:32.300Z] Found /Users/rob/repos/azure-certification-renewal-az-204-azure-developer-associate/azure-functions/dotnet/demo-azure-vscode/demo-azure-vscode.csproj. Using for user secrets file configuration.
+[2024-08-25T22:36:33.919Z] Worker process started and initialized.
+
+Functions:
+
+        HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
+
+For detailed output, run func with --verbose flag.
+[2024-08-25T22:36:38.896Z] Host lock lease acquired by instance ID '0000000000000000000000002D9F298A'.
+
+```
+
+With Core Tools running, go to the `Azure: Functions` area. Under `Functions`, expand `Local Project > Functions`. Right-click the `HttpExample` function and choose `Execute Function Now...`
+
+You should see output similar to:
+
+```sh
+[2024-08-25T22:39:46.746Z] Executing 'Functions.HttpExample' (Reason='This function was programmatically called via the host APIs.', Id=b8f2ef8b-d021-4545-87e3-1b532e2ce79d)
+[2024-08-25T22:39:46.927Z] C# HTTP trigger function processed a request.
+[2024-08-25T22:39:46.927Z] Executing OkObjectResult, writing value of type 'System.String'.
+[2024-08-25T22:39:46.989Z] Executed 'Functions.HttpExample' (Succeeded, Id=b8f2ef8b-d021-4545-87e3-1b532e2ce79d, Duration=265ms)
+
+```
