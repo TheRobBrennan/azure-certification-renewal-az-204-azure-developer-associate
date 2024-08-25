@@ -42,12 +42,12 @@
     "Xfrozen",
     "zipdeploy"
   ],
-  "azureFunctions.deploySubpath": "azure-functions/typescript/demo-azure-vscode",
-  "azureFunctions.projectLanguage": "TypeScript",
+  "azureFunctions.deploySubpath": "azure-functions/dotnet/demo-azure-vscode/bin/Release/net8.0/publish",
+  "azureFunctions.projectLanguage": "C#",
   "azureFunctions.projectRuntime": "~4",
   "debug.internalConsoleOptions": "neverOpen",
   "azureFunctions.projectLanguageModel": 4,
-  "azureFunctions.projectSubpath": "azure-functions/typescript/demo-azure-vscode",
+  "azureFunctions.projectSubpath": "azure-functions/dotnet/demo-azure-vscode",
 
   // TODO: Uncomment these NPM tasks if you are deploying JavaScript or TypeScript functions
   // "azureFunctions.preDeployTask": "npm prune (functions)",
@@ -56,5 +56,5 @@
   "azureFunctions.scmDoBuildDuringDeployment": true,
   "azureFunctions.pythonVenv": ".venv",
   "azureFunctions.postDeployTask": "npm install (functions)",
-  "azureFunctions.preDeployTask": "npm prune (functions)"
+  "azureFunctions.preDeployTask": "publish (functions)"
 }

@@ -63,3 +63,22 @@ Microsoft.NETCore.App 8.0.8 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 - The [C# extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) for Visual Studio Code.
 
 - The [Azure Functions extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions) for Visual Studio Code.
+
+## Create your local project
+
+In this section, you use Visual Studio Code to create a local Azure Functions project in C#. Later in this exercise, you publish your function code to Azure.
+
+In Visual Studio Code open the command palette and search for and run the command `Azure Functions: Create New Project....`
+
+Select the directory location for your project workspace and choose Select. You should either create a new folder or choose an empty folder for the project workspace. Don't choose a project folder that is already part of a workspace.
+
+Provide the following information at the prompts:
+
+- Select a language: `C#`
+- Select a .NET runtime: `.NET 8.0 Isolated (LTS)`
+- Select a template for your project's first function: `HTTP trigger`
+- Provide a function name: `HttpExample`
+- Provide a namespace: `My.Function`
+- Authorization level: `Anonymous`
+
+Visual Studio Code uses the provided information and generates an Azure Functions project with an HTTP trigger. You can view the local project files in the Explorer.
