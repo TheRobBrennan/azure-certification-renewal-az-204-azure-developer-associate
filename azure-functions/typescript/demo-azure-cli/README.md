@@ -55,3 +55,46 @@ The function "HttpExample" was created successfully from the "HTTP trigger" temp
 Programming model v4 for Node is currently in preview. The goal of this model is to introduce a more intuitive and idiomatic way of authoring Function triggers and bindings for JavaScript and TypeScript developers. Learn more http://aka.ms/AzFuncNodeV4. %                                                                       
 
 ```
+
+## Run the function locally
+
+```sh
+# Make sure you are in the Azure Function project folder
+% npm start
+> prestart
+> npm run clean && npm run build
+
+
+> clean
+> rimraf dist
+
+
+> build
+> tsc
+
+
+> start
+> func start
+
+
+Azure Functions Core Tools
+Core Tools Version:       4.0.5907 Commit hash: N/A +807e89766a92b14fd07b9f0bc2bea1d8777ab209 (64-bit)
+Function Runtime Version: 4.834.3.22875
+
+[2024-08-25T21:22:41.292Z] Worker process started and initialized.
+
+Functions:
+
+        HttpExample: [GET,POST] http://localhost:7071/api/HttpExample
+
+For detailed output, run func with --verbose flag.
+[2024-08-25T21:22:46.252Z] Host lock lease acquired by instance ID '0000000000000000000000002D9F298A'.
+```
+
+Copy the URL of your HTTP function from this output to a browser and append the query string ?name=<YOUR_NAME>, making the full URL like [http://localhost:7071/api/HttpExample?name=Rob](http://localhost:7071/api/HttpExample?name=Rob)
+
+```sh
+[2024-08-25T21:23:05.442Z] Executing 'Functions.HttpExample' (Reason='This function was programmatically called via the host APIs.', Id=76f2b839-b8a4-4cbc-ab63-3707b62d13dd)
+[2024-08-25T21:23:05.488Z] Http function processed request for url "http://localhost:7071/api/HttpExample?name=Rob"
+[2024-08-25T21:23:05.523Z] Executed 'Functions.HttpExample' (Succeeded, Id=76f2b839-b8a4-4cbc-ab63-3707b62d13dd, Duration=95ms)
+```
