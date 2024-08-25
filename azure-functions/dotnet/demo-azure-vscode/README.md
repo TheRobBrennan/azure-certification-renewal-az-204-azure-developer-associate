@@ -122,3 +122,9 @@ You should see output similar to:
 [2024-08-25T22:39:46.989Z] Executed 'Functions.HttpExample' (Succeeded, Id=b8f2ef8b-d021-4545-87e3-1b532e2ce79d, Duration=265ms)
 
 ```
+
+## Sign in to Azure
+
+If you aren't already signed in, choose the `Azure` icon in the Activity bar, then in the `Azure: Functions` area, choose `Sign in to Azure...`
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png)
