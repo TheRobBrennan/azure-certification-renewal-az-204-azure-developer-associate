@@ -44,6 +44,9 @@ Running 'npm install'...%
 
 # Add HttpExample as a public function using an HTTP Trigger
 % func new --name HttpExample --template "HTTP trigger" --authlevel "anonymous"
+Select a number for template:HTTP trigger
+Function name: [httpTrigger] Creating a new file /Users/rob/repos/azure-certification-renewal-az-204-azure-developer-associate/azure-functions/typescript/demo-azure-cli/src/functions/HttpExample.ts
+The function "HttpExample" was created successfully from the "HTTP trigger" template.
 
 # OPTIONAL: Want to learn more about what httptrigger is?
 % func help httptrigger
