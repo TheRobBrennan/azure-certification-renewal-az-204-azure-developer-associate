@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "demo_azure_vscode": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7118",
+      "launchBrowser": false
+    }
+  }
+}
