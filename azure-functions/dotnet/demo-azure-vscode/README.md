@@ -128,3 +128,29 @@ You should see output similar to:
 If you aren't already signed in, choose the `Azure` icon in the Activity bar, then in the `Azure: Functions` area, choose `Sign in to Azure...`
 
 ![https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png)
+
+## Create resources in Azure
+
+In Visual Studio Code, open the command palette and then select `Azure Functions: Create Function App in Azure`
+
+At the prompts, provide the following information:
+
+- Select subscription: **AUTOMATICALLY SELECTED IF YOU ONLY HAVE ONE**
+- Enter a globally unique name for the function app: `rbfndemo-dotnet-portal`
+- Select a runtime stack: `.NET 8 Isolated`
+- Select a location for new resources: `West US`
+
+In the `Azure: Activity Log` panel, the Azure extension shows the status of individual resources as they're created in Azure.
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-publish-project-vscode/resource-activity-log.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-publish-project-vscode/resource-activity-log.png)
+
+When the function app is created, the following related resources are created in your Azure subscription. The resources are named based on the name you entered for your function app.
+
+- A resource group, which is a logical container for related resources. - `rbfndemojavascriptportal`
+- A standard Azure Storage account, which maintains state and other information about your projects. - `rbfndemojavascriptportal`
+- A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan. - `rbfndemo-javascript-portal`
+- An Azure App Service plan, which defines the underlying host for your function app. - `ASP-rbfndemo-javascript-portal-6797`
+- An Application Insights instance that's connected to the function app, and which tracks the use of your functions in the app. - `rbfndemojavascriptportal`
+- A notification is displayed after your function app is created and the deployment package is applied.
+
+Tip: By default, the Azure resources required by your function app are created based on the name you enter for your function app. By default, the resources are created with the function app in the same, new resource group. If you want to customize the names of the associated resources or reuse existing resources, publish the project with advanced create options.
