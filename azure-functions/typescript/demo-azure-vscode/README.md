@@ -73,3 +73,7 @@ After executing the function locally, you should see output similar to the follo
 [2024-08-25T21:50:01.036Z] Executed 'Functions.HttpExample' (Succeeded, Id=f9cbf4d8-1ead-44e6-b448-d32a8ab70814, Duration=99ms)
 
 ```
+
+## Sign in to Azure
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-sign-in-vs-code/functions-sign-into-azure.png)
