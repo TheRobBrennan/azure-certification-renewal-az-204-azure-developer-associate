@@ -165,3 +165,13 @@ Retrieving Function App...
 ^C
 
 ```
+
+## Clean up resources
+
+```sh
+# Delete the resource group and all of the resources it contains
+% az group delete --name AzureFunctionsQuickstart-rg
+
+```
+
+NOTE: This command may take a little bit of time.
