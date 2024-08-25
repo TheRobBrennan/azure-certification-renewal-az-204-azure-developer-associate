@@ -169,3 +169,11 @@ Once you have successfully deployed to Azure, you should see `Output` similar to
 3:52:33 PM rbfndemo-dotnet-portal: HTTP Trigger Urls:
   HttpExample: https://rbfndemo-dotnet-portal.azurewebsites.net/api/httpexample
 ```
+
+## Run the function in Azure
+
+Back in the `Resources` area in the side bar, expand your subscription, your new function app, and `Functions`. Right-click the `HttpExample` function and choose `Execute Function Now...`
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png)
+
+Example URL for the HttpExample function - [https://rbfndemo-dotnet-portal.azurewebsites.net/api/httpexample](https://rbfndemo-dotnet-portal.azurewebsites.net/api/httpexample)
