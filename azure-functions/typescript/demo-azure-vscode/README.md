@@ -119,3 +119,9 @@ Once you have successfully deployed to Azure, you should see `Output` similar to
   HttpExample: https://rbfndemo-typescript-portal.azurewebsites.net/api/httpexample
 
 ```
+
+## Run the function in Azure
+
+![https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png](https://learn.microsoft.com/en-us/azure/includes/media/functions-vs-code-run-remote/execute-function-now.png)
+
+Example URL for the HttpExample function - [https://rbfndemo-typescript-portal.azurewebsites.net/api/httpexample](https://rbfndemo-typescript-portal.azurewebsites.net/api/httpexample)
