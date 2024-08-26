@@ -30,22 +30,44 @@ myLocation=westus
 # This is a unique name to identify your Azure Cosmos DB account. 
 # The name can only contain lowercase letters, numbers, and 
 # the hyphen (-) character - and be between 3-31 characters in length
-myCosmosDBacct=rbaz204
+myCosmosDBacct=rbaz204a
+myCosmosDB=cosmicworks
 
 # Create a resource group
 az group create --location $myLocation --name $myRG
 
-# Create the Azure Cosmos DB account
-az cosmosdb create --name $myCosmosDBacct --resource-group $myRG
+# Create the serverless Azure Cosmos DB account (this may take several minutes)
+az cosmosdb create \
+  --name $myCosmosDBacct \
+  --resource-group $myRG \
+  --locations regionName=$myLocation \
+  --default-consistency-level "Session" \
+  --capabilities EnableServerless
+
+# Create the cosmicworks database
+az cosmosdb sql database create \
+  --account-name $myCosmosDBacct \
+  --name $myCosmosDB \
+  --resource-group $myRG
+
+# Create the products container with a partition key of /categoryId
+az cosmosdb sql container create \
+  --account-name $myCosmosDBacct \
+  --database-name $myCosmosDB \
+  --name products \
+  --resource-group $myRG \
+  --partition-key-path "/categoryId"
+
+# Create the productslease container with a partition key of /partitionKey:
+az cosmosdb sql container create \
+  --account-name $myCosmosDBacct \
+  --database-name $myCosmosDB \
+  --name productslease \
+  --resource-group $myRG \
+  --partition-key-path "/partitionKey"
 
 ```
 
 Once your Azure Cosmos DB account has been created, please be sure to take note of the `documentEndpoint` shown in the JSON response for later use in this exercise.
 
-In my example, `documentEndpoint` is:
-
-```json
-{
-  "documentEndpoint": "https://rbaz204-westus.documents.azure.com:443/"
-}
-```
+In my example, `documentEndpoint` is `https://rbaz204a-westus.documents.azure.com:443/` - we will need to navigate to our `Azure Cosmos DB account` to the `Keys` section to find the `Primary Key` we will need in our application.
