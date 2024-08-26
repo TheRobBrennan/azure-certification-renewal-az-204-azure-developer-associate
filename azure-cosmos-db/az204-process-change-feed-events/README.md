@@ -119,3 +119,10 @@ Detected Operation:     [rb1]   A cool product.
 ```
 
 ✅ Success. Finally.
+
+## Clean up resources
+
+```sh
+az group delete --name $myRG --no-wait
+
+```
