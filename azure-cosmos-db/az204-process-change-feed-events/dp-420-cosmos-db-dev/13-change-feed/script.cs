@@ -40,3 +40,6 @@ ChangeFeedProcessor processor = builder
     .WithInstanceName("consoleApp")
     .WithLeaseContainer(leaseContainer)
     .Build();
+
+// Start the processor asynchronously
+await processor.StartAsync();
