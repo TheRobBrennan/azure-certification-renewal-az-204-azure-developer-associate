@@ -42,4 +42,12 @@ Now that we have a `Dockerfile` to work with, let's build the image and push it 
 ```sh
 # Build our image using the Dockerfile and our current directory as the context
 az acr build --image sample/hello-world:v1 --registry $myContainerRegistry --file Dockerfile .
+
+# List the repositories in our registry
+az acr repository list --name $myContainerRegistry --output table
+
+# List the tags on our sample hello-world repository
+az acr repository show-tags --name $myContainerRegistry \
+    --repository sample/hello-world --output table
+
 ```
