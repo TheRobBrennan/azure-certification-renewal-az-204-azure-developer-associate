@@ -111,3 +111,9 @@ For more examples and ideas, visit:
 
 Run ID: cf2 was successful after 3s
 ```
+
+## Clean up resources
+
+```sh
+az group delete --name $myRG --no-wait
+```
