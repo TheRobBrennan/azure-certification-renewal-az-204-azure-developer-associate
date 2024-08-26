@@ -28,3 +28,9 @@ ChangesHandler<Product> handleChanges = async (
   }
 
 };
+
+// Create a new ChangeFeedProcessorBuilder instance using the sourceContainer and handleChanges delegate
+var builder = sourceContainer.GetChangeFeedProcessorBuilder<Product>(
+    processorName: "productsProcessor",
+    onChangesDelegate: handleChanges
+);
