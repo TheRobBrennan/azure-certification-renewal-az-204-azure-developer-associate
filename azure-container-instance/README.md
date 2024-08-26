@@ -26,4 +26,15 @@ az container create --resource-group $myRG \
     --ports 80 \
     --dns-name-label $DNS_NAME_LABEL --location $myLocation
 
+# Verify the container is running
+az container show --resource-group $myRG \
+    --name mycontainer \
+    --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" \
+    --out table
+
+# EXAMPLE OUTPUT:
+# FQDN                                        ProvisioningState
+# ------------------------------------------  -------------------
+# aci-example-31658.westus.azurecontainer.io  Succeeded
+
 ```
