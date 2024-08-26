@@ -36,3 +36,10 @@ For the purposes of this demo, we're going to create a `Dockerfile` in our `./az
 # Create an example Dockerfile for us to use with our registry
 echo FROM mcr.microsoft.com/hello-world > Dockerfile
 ```
+
+Now that we have a `Dockerfile` to work with, let's build the image and push it to our registry:
+
+```sh
+# Build our image using the Dockerfile and our current directory as the context
+az acr build --image sample/hello-world:v1 --registry $myContainerRegistry --file Dockerfile .
+```
