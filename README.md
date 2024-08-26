@@ -8,6 +8,12 @@ An example exercise to deploy a container app by using the Azure CLI can be foun
 
 - [./azure-container-apps/README.md](./azure-container-apps/README.md)
 
+## Azure Container Registry
+
+An example exercise to build and run a container by using Azure Container Registry Tasks can be found at:
+
+- [./azure-container-registry/README.md](./azure-container-registry/README.md)
+
 ## Azure Functions
 
 Example Azure Function projects are available in this repo for:
