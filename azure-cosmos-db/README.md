@@ -37,3 +37,15 @@ In my example, `documentEndpoint` is:
   "documentEndpoint": "https://rbaz204-westus.documents.azure.com:443/"
 }
 ```
+
+## Set up the console application
+
+```sh
+# Create a folder for our console application and navigate to it
+mkdir az204-cosmos
+cd az204-cosmos
+
+# Create the .NET console app
+dotnet new console
+
+```
