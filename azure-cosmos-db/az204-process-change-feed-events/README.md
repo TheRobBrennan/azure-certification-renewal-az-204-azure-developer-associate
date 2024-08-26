@@ -71,3 +71,14 @@ az cosmosdb sql container create \
 Once your Azure Cosmos DB account has been created, please be sure to take note of the `documentEndpoint` shown in the JSON response for later use in this exercise.
 
 In my example, `documentEndpoint` is `https://rbaz204a-westus.documents.azure.com:443/` - we will need to navigate to our `Azure Cosmos DB account` to the `Keys` section to find the `Primary Key` we will need in our application.
+
+## Implement the change feed processor in the .NET SDK
+
+```sh
+# Navigate to our change feed project folder
+cd dp-420-cosmos-db-dev/13-change-feed
+```
+
+In VS Code, take a look at [product.cs](./dp-420-cosmos-db-dev/13-change-feed/product.cs) to see what our `Product` properties are. This lab will use the `id` and `name` properties.
+
+Now, let's look at [script.cs](./dp-420-cosmos-db-dev/13-change-feed/script.cs) so we can update our `endpoint` and `key` variables with our `documentEndpoint` and `Primary Key`, respectively.
