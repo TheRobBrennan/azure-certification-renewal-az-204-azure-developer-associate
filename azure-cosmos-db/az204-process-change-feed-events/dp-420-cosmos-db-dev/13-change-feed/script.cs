@@ -7,3 +7,7 @@ string key = "EnMM1MvjMyTNvzjKAuNN5KvtkAzmgdgBaHwTWfUizXq0V4mSNwJO9mYfpJGxyloMQJ
 
 // Connect to our serverless Cosmos DB account
 CosmosClient client = new CosmosClient(endpoint, key);
+
+// Get our containers from Cosmos DB
+Container sourceContainer = client.GetContainer("cosmicworks", "products");
+Container leaseContainer = client.GetContainer("cosmicworks", "productslease");
