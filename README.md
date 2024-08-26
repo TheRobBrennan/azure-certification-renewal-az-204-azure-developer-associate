@@ -22,13 +22,11 @@ An example exercise to build and run a container by using Azure Container Regist
 
 ## Azure Cosmos DB
 
-An example exercise to create resources using the Microsoft .NET SDK v3 in Azure Cosmos DB can be found at:
+Example Azure Cosmos DB projects are available in this folder to:
 
-- [./azure-cosmos-db/az204-connect-to-cosmos-and-create-a-collection/README.md](./azure-cosmos-db/az204-connect-to-cosmos-and-create-a-collection/README.md)
+- [Create resources using the Microsoft .NET SDK v3 in Azure Cosmos DB](./azure-cosmos-db/az204-connect-to-cosmos-and-create-a-collection/README.md)
 
-An example exercise to process change feed events using the Azure Cosmos DB for NoSQL SDK can be found at:
-
-- [./azure-cosmos-db/az204-process-change-feed-events/README.md](./azure-cosmos-db/az204-process-change-feed-events/README.md)
+- [Process change feed events using the Azure Cosmos DB for NoSQL SDK](./azure-cosmos-db/az204-process-change-feed-events/README.md)
 
 ## Azure Functions
 
