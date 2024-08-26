@@ -20,6 +20,12 @@ An example exercise to build and run a container by using Azure Container Regist
 
 - [./azure-container-registry/README.md](./azure-container-registry/README.md)
 
+## Azure Cosmos DB
+
+An example exercise to create resources using the Microsoft .NET SDK v3 in Azure Cosmos DB can be found at:
+
+- [./azure-cosmos-db/README.md](./azure-cosmos-db/README.md)
+
 ## Azure Functions
 
 Example Azure Function projects are available in this repo for:
