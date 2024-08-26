@@ -37,4 +37,9 @@ az container show --resource-group $myRG \
 # ------------------------------------------  -------------------
 # aci-example-31658.westus.azurecontainer.io  Succeeded
 
+# VERIFY: Open your browser and view http://aci-example-31658.westus.azurecontainer.io/
+
+## Clean up resources
+
+az group delete --name $myRG --no-wait
 ```
