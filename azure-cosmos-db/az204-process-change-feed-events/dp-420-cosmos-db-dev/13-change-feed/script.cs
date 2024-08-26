@@ -5,4 +5,5 @@ using static Microsoft.Azure.Cosmos.Container;
 string endpoint = "https://rbaz204a-westus.documents.azure.com:443/";
 string key = "EnMM1MvjMyTNvzjKAuNN5KvtkAzmgdgBaHwTWfUizXq0V4mSNwJO9mYfpJGxyloMQJqQ4vyFGDP5ACDbXBvpNg==";
 
+// Connect to our serverless Cosmos DB account
 CosmosClient client = new CosmosClient(endpoint, key);
