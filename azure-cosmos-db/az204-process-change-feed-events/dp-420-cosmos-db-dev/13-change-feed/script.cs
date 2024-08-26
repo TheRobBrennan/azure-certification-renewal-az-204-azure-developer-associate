@@ -11,3 +11,20 @@ CosmosClient client = new CosmosClient(endpoint, key);
 // Get our containers from Cosmos DB
 Container sourceContainer = client.GetContainer("cosmicworks", "products");
 Container leaseContainer = client.GetContainer("cosmicworks", "productslease");
+
+// Create a new delegate variable to handle the processing of the change feed
+ChangesHandler<Product> handleChanges = async (
+    IReadOnlyCollection<Product> changes,
+    CancellationToken cancellationToken
+) => {
+  // Print a message to the console to indicate that we are handling a batch of changes
+  Console.WriteLine($"START\tHandling batch of changes...");
+
+  // Iterate over each product in the changes collection
+  foreach(Product product in changes)
+  {
+    // Use the built-in asynchronous Console.WriteLineAsync static method to print the id and name properties of the product variable
+    await Console.Out.WriteLineAsync($"Detected Operation:\t[{product.id}]\t{product.name}");
+  }
+
+};
