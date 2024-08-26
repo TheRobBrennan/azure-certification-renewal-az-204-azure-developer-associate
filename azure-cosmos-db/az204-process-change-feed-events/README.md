@@ -11,5 +11,11 @@ IMPORTANT: If the lab environment is unavailable, please see the [guide](https:/
 % git clone https://github.com/microsoftlearning/dp-420-cosmos-db-dev
 
 # Navigate to the newly-cloned folder and remove .git
+% cd dp-420-cosmos-db-dev
 
+# Remove .git history so we can fold this into our current project for reference
+% rm -rf .git
+
+# Navigate to the change feed lab example
+% cd 13-change-feed
 ```
