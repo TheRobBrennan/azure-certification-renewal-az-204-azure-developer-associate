@@ -27,3 +27,12 @@ az acr create --resource-group $myRG \
 # NOTE: The command creates a Basic registry, a cost-optimized option for developers learning about Azure Container Registry.
 
 ```
+
+## Build and push image from a Dockerfile
+
+For the purposes of this demo, we're going to create a `Dockerfile` in our `./azure-container-registry` for quick reference:
+
+```sh
+# Create an example Dockerfile for us to use with our registry
+echo FROM mcr.microsoft.com/hello-world > Dockerfile
+```
