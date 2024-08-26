@@ -2,6 +2,7 @@
   "cSpell.words": [
     "appcont",
     "authlevel",
+    "azurecontainer",
     "azurecontainerapps",
     "azurecr",
     "azuredocs",
@@ -27,6 +28,7 @@
     "logstream",
     "Mbytes",
     "mksquashfs",
+    "mycontainer",
     "ostype",
     "packagedir",
     "prestart",
