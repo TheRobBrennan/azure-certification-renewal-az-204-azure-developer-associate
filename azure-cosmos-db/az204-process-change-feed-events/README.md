@@ -84,3 +84,23 @@ In VS Code, take a look at [product.cs](./dp-420-cosmos-db-dev/13-change-feed/pr
 Now, let's look at [script.cs](./dp-420-cosmos-db-dev/13-change-feed/script.cs) so we can update our `endpoint` and `key` variables with our `documentEndpoint` and `Primary Key`, respectively.
 
 Please see comments in [script.cs](./dp-420-cosmos-db-dev/13-change-feed/script.cs) to see how we are building out our application.
+
+Once we are ready to build and run our application:
+
+```sh
+# Make sure we are in the 13-change-feed folder where our source C# files are 
+
+# Build and run the project
+dotnet run
+
+```
+
+You should see output similar to:
+
+```sh
+RUN     Listening for changes...
+Press any key to stop
+
+```
+
+Leave both Visual Studio Code and the terminal open before proceeding to the next step.
