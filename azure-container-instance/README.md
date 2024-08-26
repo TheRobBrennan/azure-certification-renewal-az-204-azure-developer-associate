@@ -13,7 +13,17 @@ In this exercise you learn how to perform the following actions:
 myRG=az204-aci-rg
 myLocation=westus
 
+# Create a unique DNS name to expose your container to the Internet
+DNS_NAME_LABEL=aci-example-$RANDOM
+
 # Create a resource group
 az group create --name $myRG --location $myLocation
+
+# Create a container (this may take a few minutes to complete)
+az container create --resource-group $myRG \
+    --name mycontainer \
+    --image mcr.microsoft.com/azuredocs/aci-helloworld \
+    --ports 80 \
+    --dns-name-label $DNS_NAME_LABEL --location $myLocation
 
 ```
