@@ -34,3 +34,9 @@ var builder = sourceContainer.GetChangeFeedProcessorBuilder<Product>(
     processorName: "productsProcessor",
     onChangesDelegate: handleChanges
 );
+
+// Create a new ChangeFeedProcessor instance using the builder and leaseContainer
+ChangeFeedProcessor processor = builder
+    .WithInstanceName("consoleApp")
+    .WithLeaseContainer(leaseContainer)
+    .Build();
