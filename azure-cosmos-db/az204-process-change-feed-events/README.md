@@ -82,3 +82,5 @@ cd dp-420-cosmos-db-dev/13-change-feed
 In VS Code, take a look at [product.cs](./dp-420-cosmos-db-dev/13-change-feed/product.cs) to see what our `Product` properties are. This lab will use the `id` and `name` properties.
 
 Now, let's look at [script.cs](./dp-420-cosmos-db-dev/13-change-feed/script.cs) so we can update our `endpoint` and `key` variables with our `documentEndpoint` and `Primary Key`, respectively.
+
+Please see comments in [script.cs](./dp-420-cosmos-db-dev/13-change-feed/script.cs) to see how we are building out our application.
