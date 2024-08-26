@@ -4,6 +4,7 @@
     "ms-dotnettools.csharp",
     "ms-python.python",
     "azurite.azurite",
-    "ms-dotnettools.csdevkit"
+    "ms-dotnettools.csdevkit",
+    "ms-azuretools.vscode-azurecontainerapps"
   ]
 }
