@@ -2,6 +2,8 @@
 
 This project explores ideas while preparing to renew my Azure Developer Associate (AZ-204) certification.
 
+![✅ Success! AZ-204 is renewed up until September 4th, 2025](./certification/AZ-204-Azure-Developer-Associate/20240825-renewed-until-2025.png)
+
 ## Azure Container Apps
 
 An example exercise to deploy a container app by using the Azure CLI can be found at:
