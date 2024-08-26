@@ -8,6 +8,12 @@ An example exercise to deploy a container app by using the Azure CLI can be foun
 
 - [./azure-container-apps/README.md](./azure-container-apps/README.md)
 
+## Azure Container Instance
+
+An example exercise to deploy a container instance using the Azure CLI can be found at:
+
+- [./azure-container-instance/README.md](./azure-container-instance/README.md)
+
 ## Azure Container Registry
 
 An example exercise to build and run a container by using Azure Container Registry Tasks can be found at:
