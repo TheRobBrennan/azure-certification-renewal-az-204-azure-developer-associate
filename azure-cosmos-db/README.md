@@ -57,3 +57,7 @@ dotnet new console
 dotnet add package Microsoft.Azure.Cosmos
 
 ```
+
+## Add code to connect to an Azure Cosmos DB account to create our database and container
+
+Please see [./az204-cosmos/Program.cs](./az204-cosmos/Program.cs) for additional work in our console application.
