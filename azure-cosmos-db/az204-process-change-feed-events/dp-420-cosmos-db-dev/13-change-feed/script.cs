@@ -43,7 +43,9 @@ ChangeFeedProcessor processor = builder
 
 // Start the processor asynchronously
 await processor.StartAsync();
+
 Console.WriteLine($"RUN\tListening for changes...");
 Console.WriteLine("Press any key to stop");
 Console.ReadKey();  // Wait for a key press to stop the processor
+
 await processor.StopAsync();
