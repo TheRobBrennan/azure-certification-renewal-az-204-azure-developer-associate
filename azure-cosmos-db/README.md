@@ -7,3 +7,33 @@ In this exercise, you create a console app to perform the following operations i
 - Connect to an Azure Cosmos DB account
 - Create a database
 - Create a container
+
+## Create resources in Azure
+
+```sh
+# Variables
+myRG=az204-cosmos-rg
+myLocation=westus
+
+# This is a unique name to identify your Azure Cosmos DB account. 
+# The name can only contain lowercase letters, numbers, and 
+# the hyphen (-) character - and be between 3-31 characters in length
+myCosmosDBacct=rbaz204
+
+# Create a resource group
+az group create --location $myLocation --name $myRG
+
+# Create the Azure Cosmos DB account
+az cosmosdb create --name $myCosmosDBacct --resource-group $myRG
+
+```
+
+Once your Azure Cosmos DB account has been created, please be sure to take note of the `documentEndpoint` shown in the JSON response for later use in this exercise.
+
+In my example, `documentEndpoint` is:
+
+```json
+{
+  "documentEndpoint": "https://rbaz204-westus.documents.azure.com:443/"
+}
+```
