@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("az204-cosmos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0958e212550fe2cb045425b52943eee074002140")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59cb26c29465557cba9d45e170ba7aca05a2f2cf")]
 [assembly: System.Reflection.AssemblyProductAttribute("az204-cosmos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("az204-cosmos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

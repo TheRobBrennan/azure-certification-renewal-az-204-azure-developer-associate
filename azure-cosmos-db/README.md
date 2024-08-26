@@ -49,3 +49,11 @@ cd az204-cosmos
 dotnet new console
 
 ```
+
+## Build the console app
+
+```sh
+# Add the Microsoft.Azure.Cosmos package to the project
+dotnet add package Microsoft.Azure.Cosmos
+
+```
