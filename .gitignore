@@ -3,3 +3,4 @@ __azurite_*.json
 __blobstorage__/
 __queuestorage__/
 .DS_Store
+azure-certification-renewal-az-204-azure-developer-associate.generated.sln
