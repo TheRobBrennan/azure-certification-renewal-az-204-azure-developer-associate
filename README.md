@@ -26,6 +26,10 @@ An example exercise to create resources using the Microsoft .NET SDK v3 in Azure
 
 - [./azure-cosmos-db/README.md](./azure-cosmos-db/README.md)
 
+An example exercise to process change feed events using the Azure Cosmos DB for NoSQL SDK can be found at:
+
+- []
+
 ## Azure Functions
 
 Example Azure Function projects are available in this repo for:
