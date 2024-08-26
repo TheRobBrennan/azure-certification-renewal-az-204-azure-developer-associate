@@ -104,3 +104,18 @@ Press any key to stop
 ```
 
 Leave both Visual Studio Code and the terminal open before proceeding to the next step.
+
+## Seed your Azure Cosmos DB for NoSQL account with sample data
+
+The proposed tool - `cosmicworks` - does not work as expected on my macOS machine. 😔
+
+Let's just manually create products and see if the change feed listener works:
+
+```sh
+RUN     Listening for changes...
+Press any key to stop
+START   Handling batch of changes...
+Detected Operation:     [rb1]   A cool product.
+```
+
+✅ Success. Finally.
