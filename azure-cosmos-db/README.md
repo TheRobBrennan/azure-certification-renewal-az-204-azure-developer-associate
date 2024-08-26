@@ -77,3 +77,10 @@ dotnet build
 dotnet run
 
 ```
+
+## Clean up resources
+
+```sh
+az group delete --name $myRG --no-wait
+
+```
