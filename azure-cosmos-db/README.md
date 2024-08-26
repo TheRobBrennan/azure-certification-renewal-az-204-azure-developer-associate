@@ -61,3 +61,19 @@ dotnet add package Microsoft.Azure.Cosmos
 ## Add code to connect to an Azure Cosmos DB account to create our database and container
 
 Please see [./az204-cosmos/Program.cs](./az204-cosmos/Program.cs) for additional work in our console application.
+
+## Run the application
+
+In a terminal in VS Code, check for any errors and run the application if successful:
+
+```sh
+# Navigate to the command line application directory
+cd az204-cosmos
+
+# Build the application
+dotnet build
+
+# Run the application
+dotnet run
+
+```
