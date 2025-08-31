@@ -1,6 +1,6 @@
 {
   "name": "azure-certification-renewal-az-204-azure-developer-associate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This project explores ideas while preparing to renew my Azure Developer Associate (AZ-204) certification.",
   "scripts": {
     "test": "npm run test:workflows",
