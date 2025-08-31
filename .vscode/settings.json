@@ -1,4 +1,6 @@
 {
+  "json.validate.enable": false,
+  "json.format.enable": true,
   "cSpell.words": [
     "appcont",
     "authlevel",

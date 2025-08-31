@@ -3,7 +3,15 @@
   "version": "0.0.0",
   "description": "This project explores ideas while preparing to renew my Azure Developer Associate (AZ-204) certification.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run test:workflows",
+    "test:workflows": "chmod +x .github/test-workflows.sh && .github/test-workflows.sh",
+    "test:workflows:pr-title": "act pull_request -e .github/test-data/pr-events/minor.json -W .github/workflows/pr-title-check.yml",
+    "test:workflows:pr-title:major": "act pull_request -e .github/test-data/pr-events/major.json -W .github/workflows/pr-title-check.yml",
+    "test:workflows:pr-title:minor": "act pull_request -e .github/test-data/pr-events/minor.json -W .github/workflows/pr-title-check.yml",
+    "test:workflows:pr-title:patch": "act pull_request -e .github/test-data/pr-events/patch.json -W .github/workflows/pr-title-check.yml",
+    "test:workflows:pr-title:invalid": "act pull_request -e .github/test-data/pr-events/invalid.json -W .github/workflows/pr-title-check.yml",
+    "test:workflows:version-bump": "act push -e .github/test-data/pr-events/merge.json -W .github/workflows/version-bump.yml --container-architecture linux/amd64",
+    "test:workflows:ghcr-cleanup": "act workflow_dispatch -e .github/test-data/pr-events/workflow-dispatch.json -W .github/workflows/ghcr-cleanup.yml --container-architecture linux/amd64"
   },
   "repository": {
     "type": "git",
